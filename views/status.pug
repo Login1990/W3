@@ -1,0 +1,14 @@
+extends layout 
+
+block content
+  h1 Express
+  p Welcome to Express
+
+block result
+    script(src="../javascripts/delete_request.js") 
+    h1= status
+    - if (name)
+      p Name: 
+        label(id="todo-name") #{name} 
+      p List of todos: #{todos}
+      button(onclick="deleteRequest()") Delete user 
